@@ -7,15 +7,30 @@ This is a reusable library for generating different types of files such as Power
 ## Features
 
 - Generate PowerPoint presentations from structured data.
-- Generate Excel files from structured data.
 - Input validation for both text and file uploads.
-  
+
+### PowerPoint Features
+
+- Load PowerPoint templates
+- Add text boxes and images
+- Add headers, footers, and slide numbers
+- Modular design for extension into specific use cases (e.g., dictation or custom layouts)
+
 ## Installation
 
+### Manual
 To install the core library, clone the repository and run:
 
 ```bash
 pip install -e .
+```
+
+### From GitHub Repository
+
+To install the package directly from the repository, you can include it in your `requirements.txt` of any project:
+
+```bash
+git+https://github.com/denuca/core.file.generator.git@main
 ```
 
 ## Usage
@@ -42,4 +57,12 @@ To run the tests, use:
 
 ```bash
 pytest
+```
+
+## Compile Core
+
+To check that the code compiles, use:
+
+```bash
+find core -name "*.py" -not -path "core/tests/*" -exec python -m py_compile {} \;
 ```

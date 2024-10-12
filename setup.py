@@ -7,13 +7,13 @@ setup(
     install_requires=[
         'Pillow',  # For image manipulation in PPTX files
         'python-pptx',  # For PowerPoint generation
-        'openpyxl',  # For Excel generation
+        'pytest', # For tests
     ],
-    author='Your Name',
+    author='Carine Kong',
     description='A core library for generating PPTX, Excel, and other files.',
     classifiers=[
         'Programming Language :: Python :: 3',
-        'License :: OSI Approved :: MIT License',
+        'License :: OSI Approved :: GNU License :: GPL-3.0',
         'Operating System :: OS Independent',
     ],
 )
