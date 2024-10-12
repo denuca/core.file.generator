@@ -29,6 +29,20 @@ def get_inches(left=None, top=None, width=None, height=None):
     except Exception as e:
         logger.error(f"Error converting to inches: {e}")
         raise
+from pptx import Presentation
+
+def create_ppt():
+    """Create a new PowerPoint presentation object."""
+    return Presentation()
+
+def add_title_slide(ppt, title, content):
+    """Add a title slide with title and content to the presentation."""
+    slide = ppt.slides.add_slide(ppt.slide_layouts[0])  # Title Slide
+    title_placeholder = slide.shapes.title
+    content_placeholder = slide.placeholders[1]
+    title_placeholder.text = title
+    content_placeholder.text = content
+    return slide
 
 def add_text_to_slide(slide, placeholder_name, text):
     """Add text to a slide using a placeholder name."""
